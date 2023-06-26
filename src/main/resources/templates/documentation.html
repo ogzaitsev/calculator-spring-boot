@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <title>Документация</title>
+  <link rel="stylesheet" type="text/css" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+</head>
+<body>
+<div class="container-fluid">
+  <div>
+    <nav class="navbar navbar-expand-lg bg-light navbar-light">
+      <a class="navbar-brand" th:href="@{/}">
+        <img th:src="@{/images/icon.png}"/>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#topNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="topNavbar">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/calculator}">Calculator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" th:href="@{/documentation}">Documentation</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div>
+    <h1>Документация</h1>
+  </div>
+  <ul>
+    <li><p>Калькулятор поддерживает как ввод с клавиатуры, так и ввод с помощью кнопок</p>
+    </li>
+    <li><p>При неверном вводе калькулятор выводит сообщение о неправильном вводе</p>
+    </li>
+    <li><p>Между символами может быть любое количество пробелов - но лучше вводить без них</p>
+    </li>
+    <li><p>Калькулятор работает с различными операторами</p>
+    </li>
+    <li><p><strong>Арифметические операторы</strong>:</p>
+    </li>
+  </ul>
+  <table class="table-bordered table-striped table-light">
+    <thead  class="thead-light">
+    <tr>
+      <th>Название оператора</th>
+      <th>Запись в калькулятор</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+      <td>Скобки</td>
+      <td>(a + b)</td>
+    </tr>
+    <tr>
+      <td>Сложение</td>
+      <td>a + b</td>
+    </tr>
+    <tr>
+      <td>Вычитание</td>
+      <td>a - b</td>
+    </tr>
+    <tr>
+      <td>Умножение</td>
+      <td>a * b</td>
+    </tr>
+    <tr>
+      <td>Деление</td>
+      <td>a / b</td>
+    </tr>
+    <tr>
+      <td>Возведение в степень</td>
+      <td>a ^ b</td>
+    </tr>
+    <tr>
+      <td>Унарный плюс</td>
+      <td>+a</td>
+    </tr>
+    <tr>
+      <td>Унарный минус</td>
+      <td>-a</td>
+    </tr>
+    </tbody></table>
+  <ul>
+    <li>Калькулятор поддерживает следующие функции:</li>
+    <li><strong>Функции</strong>:</li>
+  </ul>
+  <table class="table-bordered table-striped table-light">
+    <thead  class="thead-light">
+    <tr>
+      <th>Описание функции</th>
+      <th>Функция</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+      <td>Вычисляет косинус</td>
+      <td>cos(x)</td>
+    </tr>
+    <tr>
+      <td>Вычисляет синус</td>
+      <td>sin(x)</td>
+    </tr>
+    <tr>
+      <td>Вычисляет тангенс</td>
+      <td>tan(x)</td>
+    </tr>
+    </tbody></table>
+  <div class="text-center">
+    <p>Calculator &copy; 2023, oleg.zaitsev@proton.me</p>
+  </div>
+</div>
+</body>
+</html>
