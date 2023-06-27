@@ -43,18 +43,26 @@ public class Expression {
         if (!deque.isEmpty())
             return false;
         if (inputExpression.indexOf('.') >= 0) { // не сработает при 123.45.67
-            for (int i = 0; i < inputExpression.length();) {
+            for (int i = 0; i < inputExpression.length(); ) {
                 i = inputExpression.indexOf('.', i);
                 if (i < 0) {
                     break;
                 }
-                if (i == 0 || i == inputExpression.length() - 1)
-                    return false;
+//                if (i == 0 || i == inputExpression.length() - 1)
+//                    return false;
                 if (!(Character.isDigit(inputExpression.charAt(i - 1)) &&
                         Character.isDigit(inputExpression.charAt(i + 1)))) {
                     return false;
                 } else {
-                    i++;
+                    while (i + 1 < inputExpression.length()) {
+                        if(Character.isDigit(inputExpression.charAt(++i))) {
+                            continue;
+                        } else if (inputExpression.charAt(i) == '.') {
+                            return false;
+                        } else {
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -72,7 +80,9 @@ public class Expression {
             }
             if (charArray[i] == ')') {
                 if (i < charArray.length - 1 &&
-                        (Character.isDigit(charArray[i + 1]) || Character.isLetter(charArray[i + 1])))
+                        (Character.isDigit(charArray[i + 1]) ||
+                                Character.isLetter(charArray[i + 1]) ||
+                                charArray[i + 1] == '('))
                     return false;
             }
         }

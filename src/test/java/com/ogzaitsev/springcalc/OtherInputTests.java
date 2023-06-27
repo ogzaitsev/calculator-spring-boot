@@ -38,4 +38,18 @@ public class OtherInputTests {
         calcController.showCalculator(expression);
         assertThat(expression.getResultExpression()).isEqualTo("1.0000000");
     }
+
+    @Test
+    void invalidDots1() {
+        expression.setInputExpression("1.2.3 + sin(0)");
+        calcController.showCalculator(expression);
+        assertThat(expression.getResultExpression()).isEqualTo("Ошибка в выражении");
+    }
+
+    @Test
+    void invalidDots2() {
+        expression.setInputExpression("1.0/0.123456.5*5");
+        calcController.showCalculator(expression);
+        assertThat(expression.getResultExpression()).isEqualTo("Ошибка в выражении");
+    }
 }
