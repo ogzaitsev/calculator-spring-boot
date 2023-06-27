@@ -1,6 +1,5 @@
 package com.ogzaitsev.springcalc.model;
 
-import com.ogzaitsev.springcalc.controller.CalcController;
 
 public class OperationToken extends Token {
     private char operation;

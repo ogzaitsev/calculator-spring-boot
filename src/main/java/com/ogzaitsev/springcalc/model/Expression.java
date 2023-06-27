@@ -2,7 +2,6 @@ package com.ogzaitsev.springcalc.model;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.Iterator;
 
 public class Expression {
 
